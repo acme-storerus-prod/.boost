@@ -19,6 +19,4 @@ jobs:
         uses: boostsecurityio/boostsec-scanner-github@v4
         with:
           api_token: ${{secrets.BOOST_API_TOKEN}}
-          scan_main_timeout: 30
-          pre_scan_cmd: sleep 5m
           trigger_id: ${{fromJSON(github.event.inputs.scan_params).trigger_id}}
