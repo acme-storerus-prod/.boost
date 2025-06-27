@@ -20,4 +20,5 @@ jobs:
         with:
           api_token: ${{secrets.BOOST_API_TOKEN}}
           scan_main_timeout: 30
+          pre_scan_cmd: 5m
           trigger_id: ${{fromJSON(github.event.inputs.scan_params).trigger_id}}
